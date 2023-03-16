@@ -8,6 +8,28 @@
     "mysql": "2.18.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.21"
-  }
+    "nodemon": "2.0.21"
+  },
+  "name": "inventario",
+  "version": "1.0.0",
+  "description": "sistema de inventario para netbooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaac-bruno/inventario.git"
+  },
+  "keywords": [
+    "inventario",
+    "netbooks",
+    "gestión"
+  ],
+  "author": "Isaac Bruno Quiroga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isaac-bruno/inventario/issues"
+  },
+  "homepage": "https://github.com/isaac-bruno/inventario#readme"
 }
