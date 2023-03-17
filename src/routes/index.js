@@ -7,15 +7,14 @@ const notebooks = require('../api/notebooks/routes');
 
 const router = express.Router();
 
-router.use('/', (request, response) => {
-  response.redirect('/home')
-})
-
-router.use('/home', )
+// router.use('/home', )
 // router.use('/users', users);
 router.use('/notebooks', notebooks);
 // router.use('/addresses', addresses);
 // router.use('/addressTypes', addressTypes);
 // router.use('/issues', issues);
+router.use('/', (request, response) => {
+  response.redirect('/home')
+})
 
 module.exports = router;
