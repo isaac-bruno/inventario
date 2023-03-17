@@ -2,12 +2,13 @@ const express = require('express');
 // const users = require('../api/users/routes');
 // const issues = require('../api/issues/routes');
 const notebooks = require('../api/notebooks/routes');
+const home = require('../api/home/routes');
 // const addresses = require('../api/addresses/routes');
 // const addressTypes = require('../api/addressTypes/routes');
 
 const router = express.Router();
 
-// router.use('/home', )
+router.use('/home', home)
 // router.use('/users', users);
 router.use('/notebooks', notebooks);
 // router.use('/addresses', addresses);
