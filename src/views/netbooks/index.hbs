@@ -1,36 +1,60 @@
 {{#> layout }}
-    <h2>Netbooks</h2>
+<nav>
+    <ul>
+        <li><h2>Netbooks</h2></li>
+    </ul>
+    <ul>
+        <li>
+            <button id="btn-create" data-target="modal-create">
+                Nuevo
+            </button>
+        </li>
+    </ul>
+</nav>
 <!-- Button to trigger the modal -->
-<button id="btn-create" class="contrast" data-target="modal-example">
-  Launch demo modal
-</button>
 
 <!-- Modal -->
-<dialog id="modal-example">
+<dialog id="modal-create">
   <article>
     <a href="#close"
       aria-label="Close"
       class="close"
-      data-target="modal-example"
+      data-target="modal-create"
       onClick="toggleModal(event)">
     </a>
-    <h3>Confirm your action!</h3>
-    <p>
-      Cras sit amet maximus risus. 
-      Pellentesque sodales odio sit amet augue finibus pellentesque. 
-      Nullam finibus risus non semper euismod.
-    </p>
+    <h3>Nuevo</h3>
+    <form action="#">
+        <div class="grid">
+            <label for="nro_serie">Número de serie:
+                <input name="nro_serie" id="nro_serie" type="text" required>
+            </label>
+            <label for="nro_inventario">Número de inventario:
+                <input name="nro_inventario" id="nro_serie" type="number" min="1" required>
+            </label>
+        </div>
+        <label for="marca">Marca
+            <select name="marca" id="marca" required>
+                <option value="1">bangho</option>
+                <option value="2">exo</option>
+                <option value="3">samsung</option>
+            </select>
+        </label>
+        <label for="servicio">
+            <input name="servicio" id="servicio" type="checkbox" role="switch" required>
+            En servicio
+        </label>
+    </form>
     <footer>
       <a href="#cancel"
         role="button"
         class="secondary"
-        data-target="modal-example"
+        data-target="modal-create"
         onClick="toggleModal(event)">
         Cancel
       </a>
       <a href="#confirm"
         role="button"
-        data-target="modal-example"
+        data-target="modal-create"
         onClick="toggleModal(event)">
         Confirm
       </a>
