@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html data-theme="light" lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario de notebooks</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script defer src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/pico.min.css">
 </head>
 <body>
-    <main>
-        <div class="container">
-            <h1 class="mt-1 text-center">Inventario</h1>
-            {{> @partial-block }}
-        </div>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Inventario</strong></li>
+        </ul>
+        <ul>
+            <li><a href="/notebooks">Notebooks</a></li>
+            <li><a href="/users">Usuarios</a></li>
+            <li><a href="/addresses">Direcciones</a></li>
+            <li><a href="/issues">Asuntos</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        {{> @partial-block }}
     </main>
-    <footer class="text-center">
+    <footer class="container">
         Esto es el footer
     </footer>
 </body>
