@@ -93,3 +93,6 @@ const getScrollbarWidth = () => {
 const isScrollbarVisible = () => {
   return document.body.scrollHeight > screen.height;
 }
+
+const btnCreate = document.getElementById('btn-create');
+btnCreate.addEventListener('click', toggleModal);
