@@ -1,0 +1,44 @@
+---
+title: Order example
+---
+
+erDiagram
+    users ||--|| roles : have
+    netbooks }o--|| generations : have
+    netbooks ||--o{ addresses : contains
+    netbooks }o--o{ issues : have
+    addresses }o--|| address_types : have
+    issues }o--|| issue_types : have
+    netbooks }o--|| brands : belong
+    users {
+        string name
+        string password
+    }
+    roles {
+        string name
+    }
+    netbooks {
+        string serial
+        int stock_number
+        bool in_service
+    }
+    brands {
+        string name
+    }
+    generations {
+        string name
+    }
+    address_types {
+        string name
+        string format
+    }
+    addresses {
+        string value
+    }
+    issues {
+        string description
+        string extra
+    }
+    issue_types {
+        string name
+    } 
